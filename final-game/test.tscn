@@ -6,14 +6,10 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ppyta"]
 radius = 90.80513
 
-[sub_resource type="TileSet" id="TileSet_ykrsh"]
-
 [node name="Map" type="Node2D" unique_id=1232347385]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=795727187]
 script = ExtResource("1_8uh7m")
-max_speed = null
-acceleration = null
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1377345454]
 position = Vector2(0, -1)
@@ -27,5 +23,4 @@ shape = SubResource("CircleShape2D_ppyta")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=737509774]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1271571649]
-tile_set = SubResource("TileSet_ykrsh")
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=541106072]
