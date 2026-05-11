@@ -12,8 +12,6 @@ radius = 54.696953
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=445599831]
 script = ExtResource("1_onrkg")
-max_speed = null
-acceleration = null
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1050690399]
 position = Vector2(9.536743e-07, 4.7683716e-07)
@@ -25,16 +23,18 @@ scale = Vector2(0.16555557, 0.16555557)
 shape = SubResource("CircleShape2D_hqtel")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=271655284]
-zoom = Vector2(3, 3)
+zoom = Vector2(3.7, 3.7)
 
-[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=645185376]
-position = Vector2(9.536743e-07, 0)
-scale = Vector2(0.37890625, 0.375)
-color = Color(0.8089983, 0.8089983, 0.8089982, 1)
+[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=622725595]
+position = Vector2(-9.536743e-07, -2.3841858e-07)
+scale = Vector2(0.4355469, 0.36523438)
+color = Color(0.81829464, 0.7941317, 0.7479605, 1)
 texture = ExtResource("3_6t5aa")
 
-[node name="flashlight" type="PointLight2D" parent="CharacterBody2D" unique_id=439753456]
-scale = Vector2(0.32000002, 0.375)
-color = Color(0.8089983, 0.8089983, 0.8089982, 1)
+[node name="flashLight" type="PointLight2D" parent="CharacterBody2D" unique_id=1295554294]
+scale = Vector2(0.21833333, 0.2914286)
+color = Color(0.81829464, 0.7941317, 0.7479605, 1)
+energy = 3.0
+shadow_enabled = true
 texture = ExtResource("4_vgqql")
 offset = Vector2(300, 0)
