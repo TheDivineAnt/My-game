@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b67qcl6rwxlfr"
-valid=false
+uid="uid://cojsfsdmhde3b"
+path="res://.godot/imported/Scene Overview.png-69cbade7ff54c84853465e8b0487983c.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Sprite/._Idle.png"
+source_file="res://Tilesheet/Pixel Art Top Down - Basic v1.2.3/Scene Overview.png"
+dest_files=["res://.godot/imported/Scene Overview.png-69cbade7ff54c84853465e8b0487983c.ctex"]
 
 [params]
 

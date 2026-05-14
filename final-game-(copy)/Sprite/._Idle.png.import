@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3d3tmtd3ylua"
+uid="uid://cb63q6hhl21sc"
 valid=false
 
 [deps]
 
-source_file="res://Sprite/._3.png"
+source_file="res://Sprite/._Idle.png"
 
 [params]
 

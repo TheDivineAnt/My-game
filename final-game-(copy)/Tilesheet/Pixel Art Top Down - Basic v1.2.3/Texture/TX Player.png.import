@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp0mc7bmhudqn"
-valid=false
+uid="uid://bwon87q5md1nj"
+path="res://.godot/imported/TX Player.png-1e0487649cfdcfb4ac15543a6c8cafaa.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Sprite/._4.png"
+source_file="res://Tilesheet/Pixel Art Top Down - Basic v1.2.3/Texture/TX Player.png"
+dest_files=["res://.godot/imported/TX Player.png-1e0487649cfdcfb4ac15543a6c8cafaa.ctex"]
 
 [params]
 

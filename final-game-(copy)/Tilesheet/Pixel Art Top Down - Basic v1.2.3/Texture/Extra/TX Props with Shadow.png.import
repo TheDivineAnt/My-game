@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpi6r2roai3fk"
-valid=false
+uid="uid://bqqejlnfb1aw"
+path="res://.godot/imported/TX Props with Shadow.png-18b6ef15edf91c3c7fd765f77fb1afee.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Sprite/._1.png"
+source_file="res://Tilesheet/Pixel Art Top Down - Basic v1.2.3/Texture/Extra/TX Props with Shadow.png"
+dest_files=["res://.godot/imported/TX Props with Shadow.png-18b6ef15edf91c3c7fd765f77fb1afee.ctex"]
 
 [params]
 

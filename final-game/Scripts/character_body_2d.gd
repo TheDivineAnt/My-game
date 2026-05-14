@@ -12,7 +12,7 @@ func _input(event):
 
 
 ## The maxiumum speed allowed, in pixels per second
-@export var max_speed:  float = 200.0
+@export var max_speed: float = 200.0
 ## Accleration as form of [code]pixels/s2 [/code]. [br]
 @export var acceleration: float = 800.0
 

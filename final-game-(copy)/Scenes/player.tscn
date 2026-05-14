@@ -36,3 +36,7 @@ color = Color(0.81731474, 0.7638896, 0.56262624, 1)
 energy = 3.0
 texture = ExtResource("4_fkybt")
 offset = Vector2(300, 0)
+
+[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D" unique_id=1424748133]
+target_position = Vector2(155, 0)
+collide_with_areas = true
