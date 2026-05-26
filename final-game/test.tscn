@@ -1792,7 +1792,7 @@ sources/2 = SubResource("TileSetAtlasSource_xersf")
 [node name="Player" parent="." unique_id=136096922 instance=ExtResource("4_ppyta")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=106546225]
-color = Color(0, 0, 0, 1)
+color = Color(0.06053035, 0.06053035, 0.060530342, 1)
 
 [node name="Tile maps" type="Node2D" parent="." unique_id=926378897]
 
