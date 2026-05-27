@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bud4car2he60k" path="res://Scenes/player.tscn" id="4_ppyta"]
 [ext_resource type="Texture2D" uid="uid://b3sng6wtfma4t" path="res://Tilesheet/Pixel Art Top Down - Basic v1.2.3/Texture/TX Tileset Grass.png" id="5_g14j6"]
 [ext_resource type="Texture2D" uid="uid://d0fhylu6h6ay8" path="res://Tilesheet/Pixel Art Top Down - Basic v1.2.3/Texture/TX Tileset Stone Ground.png" id="5_ykrsh"]
-[ext_resource type="PackedScene" uid="uid://jo1myb24aey5" path="res://Scenes/enemy.tscn" id="6_g14j6"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ppyta"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1505,7 +1504,6 @@ sources/0 = SubResource("TileSetAtlasSource_ykrsh")
 [node name="Player" parent="." unique_id=136096922 instance=ExtResource("4_ppyta")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=106546225]
-visible = false
 color = Color(0.03839717, 0.03839716, 0.038397186, 1)
 
 [node name="Tile maps" type="Node2D" parent="." unique_id=926378897]
@@ -1525,6 +1523,3 @@ tile_set = SubResource("TileSet_ykrsh")
 z_index = 6
 tile_map_data = PackedByteArray("AAAuAPT/AAAbAAQAAAAuAPX/AAAbAAUAAAAvAPH/AAAcAAEAAAAvAPL/AAAcAAIAAAAvAPP/AAAcAAMAAAAvAPT/AAAcAAQAAAAvAPX/AAAcAAUAAAAwAPH/AAAdAAEAAAAwAPL/AAAdAAIAAAAwAPP/AAAdAAMAAAAwAPT/AAAdAAQAAAAwAPX/AAAdAAUAAAAxAPP/AAAeAAMAAAAxAPT/AAAeAAQAAAAxAPX/AAAeAAUAAACs//7/AAAaAAwAAACs////AAAaAA0AAACs/wAAAAAaAA4AAACs/wEAAAAaAA8AAACt//7/AAAbAAwAAACt////AAAbAA0AAACt/wAAAAAbAA4AAACt/wEAAAAbAA8AAACu////AAAcAA0AAACu/wAAAAAcAA4AAAC8//b/AAAWABEAAAC8//f/AAAWABIAAAC8//j/AAAWABMAAAC8//n/AAAWABQAAAC9//b/AAAXABEAAAC9//f/AAAXABIAAAC9//j/AAAXABMAAAC9//n/AAAXABQAAAC9//r/AAAXABUAAAC+//X/AAAYABAAAAC+//b/AAAYABEAAAC+//f/AAAYABIAAAC+//j/AAAYABMAAAC+//n/AAAYABQAAAC+//r/AAAYABUAAAC///X/AAAZABAAAAC///b/AAAZABEAAAC///f/AAAZABIAAAC///j/AAAZABMAAAC///n/AAAZABQAAAC///r/AAAZABUAAADA//b/AAAaABEAAADA//f/AAAaABIAAADA//j/AAAaABMAAADA//n/AAAaABQAAADA//r/AAAaABUAAADB//b/AAAbABEAAADB//f/AAAbABIAAADB//j/AAAbABMAAADB//n/AAAbABQAAADC//f/AAAcABIAAADC//j/AAAcABMAAACr/+//AAAOABMAAACr//D/AAAOABQAAACr//H/AAAOABUAAACs/+//AAAPABMAAACs//D/AAAPABQAAACs//H/AAAPABUAAADL/wMAAAAaABYAAADL/wQAAAAaABcAAADL/wUAAAAaABgAAADL/wYAAAAaABkAAADM/wMAAAAbABYAAADM/wQAAAAbABcAAADM/wUAAAAbABgAAADM/wYAAAAbABkAAADN/wMAAAAcABYAAADN/wQAAAAcABcAAADN/wUAAAAcABgAAADN/wYAAAAcABkAAADO/wMAAAAdABYAAADO/wQAAAAdABcAAADO/wUAAAAdABgAAADO/wYAAAAdABkAAADN/+v/AAAAABsAAADN/+z/AAAAABwAAADO/+r/AAABABoAAADO/+v/AAABABsAAADO/+z/AAABABwAAADO/+3/AAABAB0AAADP/+r/AAACABoAAADP/+v/AAACABsAAADP/+z/AAACABwAAADP/+3/AAACAB0AAADQ/+v/AAADABsAAADQ/+z/AAADABwAAADQ/+3/AAADAB0AAACt//X/AAAAABsAAACt//b/AAAAABwAAACu//T/AAABABoAAACu//X/AAABABsAAACu//b/AAABABwAAACu//f/AAABAB0AAACv//T/AAACABoAAACv//X/AAACABsAAACv//b/AAACABwAAACv//f/AAACAB0AAACw//X/AAADABsAAACw//b/AAADABwAAACw//f/AAADAB0AAAC9/+P/AAABAAoAAAC9/+T/AAABAAsAAAC9/+X/AAABAAwAAAC9/+b/AAABAA0AAAC+/+P/AAACAAoAAAC+/+T/AAACAAsAAAC+/+X/AAACAAwAAAC+/+b/AAACAA0AAAC//+P/AAADAAoAAAC//+T/AAADAAsAAAC//+X/AAADAAwAAAC//+b/AAADAA0AAADA/+P/AAAEAAoAAADA/+T/AAAEAAsAAADA/+X/AAAEAAwAAADA/+b/AAAEAA0AAAA=")
 tile_set = SubResource("TileSet_g14j6")
-
-[node name="Enemy" parent="Tile maps" unique_id=3636412 instance=ExtResource("6_g14j6")]
-position = Vector2(-45, 141)
