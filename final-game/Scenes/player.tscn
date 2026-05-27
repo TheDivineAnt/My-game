@@ -17,7 +17,7 @@ script = ExtResource("1_onrkg")
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1050690399]
 position = Vector2(4.7683716e-07, 4.7683716e-07)
 rotation = 0.021180024
-scale = Vector2(0.08805556, 0.08361111)
+scale = Vector2(0.070466615, 0.06897615)
 texture = ExtResource("2_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=358722132]
@@ -34,6 +34,9 @@ light_mask = 1048575
 scale = Vector2(0.21228357, 0.18212888)
 color = Color(0.83327174, 0.72188723, 0.4419854, 1)
 energy = 1.91
+shadow_enabled = true
+shadow_color = Color(0.12225223, 0.12225223, 0.12225223, 0)
+shadow_filter_smooth = 64.0
 texture = ExtResource("3_vgqql")
 
 [node name="flashlight" type="PointLight2D" parent="Player" unique_id=2008503446]
@@ -41,5 +44,7 @@ position = Vector2(7.6293945e-06, 2.842171e-14)
 scale = Vector2(0.31583336, 0.28428572)
 color = Color(0.81731474, 0.7638896, 0.56262624, 1)
 energy = 3.0
+shadow_enabled = true
+shadow_color = Color(0.080783345, 0.080783345, 0.080783345, 0)
 texture = ExtResource("4_fkybt")
 offset = Vector2(300, 0)
