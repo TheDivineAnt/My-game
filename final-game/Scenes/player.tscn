@@ -11,32 +11,32 @@ radius = 42.281876
 [node name="Player" type="Node2D" unique_id=136096922]
 z_index = 5
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=445599831]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=445599831]
 script = ExtResource("1_onrkg")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1050690399]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1050690399]
 position = Vector2(4.7683716e-07, 4.7683716e-07)
 rotation = 0.021180024
 scale = Vector2(0.08805556, 0.08361111)
 texture = ExtResource("2_i3pqv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=358722132]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=358722132]
 scale = Vector2(0.16555557, 0.16555557)
 shape = SubResource("CircleShape2D_hqtel")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=271655284]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=271655284]
 zoom = Vector2(3.7, 3.7)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=963847797]
+[node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=963847797]
 light_mask = 1048575
 scale = Vector2(0.21228357, 0.18212888)
 color = Color(0.83327174, 0.72188723, 0.4419854, 1)
 energy = 1.91
 texture = ExtResource("3_vgqql")
 
-[node name="flashlight" type="PointLight2D" parent="CharacterBody2D" unique_id=2008503446]
+[node name="flashlight" type="PointLight2D" parent="Player" unique_id=2008503446]
 position = Vector2(7.6293945e-06, 2.842171e-14)
 scale = Vector2(0.31583336, 0.28428572)
 color = Color(0.81731474, 0.7638896, 0.56262624, 1)
