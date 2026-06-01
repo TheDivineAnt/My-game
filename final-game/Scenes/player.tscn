@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b0mnw52qtk6s5" path="res://torch_light.png" id="4_fkybt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqtel"]
-radius = 42.281876
+radius = 36.241608
 
 [node name="Player" type="Node2D" unique_id=136096922]
 z_index = 5
