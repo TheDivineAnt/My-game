@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://dikwi5dvoik2x" path="res://Scripts/enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://b442okgh6wlfi" path="res://Sprite/Mimic/walk.png" id="2_qi2p4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iifgy"]
-size = Vector2(23, 15)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_epg4t"]
 atlas = ExtResource("2_qi2p4")
 region = Rect2(0, 0, 146, 146)
@@ -52,20 +49,53 @@ animations = [{
 "texture": SubResource("AtlasTexture_dxifv")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walking",
 "speed": 10.0
 }]
 
-[node name="Enemy" type="Node2D" unique_id=3636412]
+[sub_resource type="CircleShape2D" id="CircleShape2D_afpow"]
+radius = 7.0
 
-[node name="Enemy" type="CharacterBody2D" parent="." unique_id=95277526]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1f0kj"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_287tu"]
+radius = 201.06218
+
+[node name="Enemy" type="CharacterBody2D" unique_id=433381516]
 script = ExtResource("1_4gyqm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=2020332344]
-position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_iifgy")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy" unique_id=312014250]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1769159803]
 position = Vector2(0, -5.9604645e-08)
 scale = Vector2(0.6164383, 0.5958904)
 sprite_frames = SubResource("SpriteFrames_pwjut")
+animation = &"walking"
+autoplay = "walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=340465099]
+shape = SubResource("CircleShape2D_afpow")
+
+[node name="KillArea" type="Area2D" parent="." unique_id=1679443065]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillArea" unique_id=226813533]
+shape = SubResource("CircleShape2D_1f0kj")
+
+[node name="SightRange" type="Area2D" parent="." unique_id=1885911237]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SightRange" unique_id=467723136]
+shape = SubResource("CircleShape2D_287tu")
+
+[node name="LOSRayCast" type="RayCast2D" parent="." unique_id=1603355019]
+target_position = Vector2(201, 0)
+collide_with_areas = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=892713751]
+path_desired_distance = 4.0
+target_desired_distance = 4.0
+
+[connection signal="body_entered" from="KillArea" to="." method="_on_kill_area_body_entered"]
+[connection signal="body_entered" from="SightRange" to="." method="_on_sight_range_body_entered"]
+[connection signal="body_exited" from="SightRange" to="." method="_on_sight_range_body_exited"]
+[connection signal="visibility_changed" from="LOSRayCast" to="." method="_on_los_ray_cast_visibility_changed"]
