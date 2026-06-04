@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://q31wq3uso8no"]
+
+[ext_resource type="Script" uid="uid://bd2tpuh2iefx1" path="res://Scripts/main_menu.gd" id="1_28flt"]
+
+[node name="Main Menu" type="Control" unique_id=137369777]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28flt")
+
+[node name="PlayButton" type="Button" parent="." unique_id=1028842707]
+z_index = 2
+layout_mode = 0
+offset_left = 353.0
+offset_top = 85.0
+offset_right = 776.0
+offset_bottom = 212.0
+text = "Start"
+
+[node name="options" type="Button" parent="." unique_id=1370307523]
+z_index = 2
+layout_mode = 0
+offset_top = 282.0
+offset_right = 426.0
+offset_bottom = 404.0
+text = "Options"
+
+[node name="Quit" type="Button" parent="." unique_id=1056845993]
+z_index = 2
+layout_mode = 0
+offset_left = 353.0
+offset_top = 473.0
+offset_right = 779.0
+offset_bottom = 592.0
+text = "Quit"
+
+[node name="Credits" type="Button" parent="." unique_id=611873187]
+z_index = 2
+layout_mode = 0
+offset_left = 730.0
+offset_top = 282.0
+offset_right = 1152.0
+offset_bottom = 410.0
+text = "Credits
+"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

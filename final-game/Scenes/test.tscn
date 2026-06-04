@@ -9233,14 +9233,14 @@ sources/0 = SubResource("TileSetAtlasSource_77dp3")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xersf"]
 size = Vector2(82, 56)
 
-[node name="Map" type="Node2D" unique_id=1232347385]
+[node name="Map" type="Node2D" unique_id=1232347385 groups=["Enemy"]]
 position = Vector2(0, -1)
 
 [node name="Player" parent="." unique_id=136096922 groups=["player"] instance=ExtResource("4_ppyta")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=106546225]
 visible = false
-color = Color(0.19219694, 0.19219697, 0.1921969, 1)
+color = Color(0.029506508, 0.029506575, 0.029506557, 1)
 
 [node name="Tile maps" type="Node2D" parent="." unique_id=926378897]
 
@@ -9299,6 +9299,3 @@ shape = SubResource("RectangleShape2D_xersf")
 [node name="Enemy" parent="." unique_id=3636412 groups=["Player"] instance=ExtResource("10_00tp4")]
 z_index = 6
 position = Vector2(-1040, -797)
-
-[node name="Enemy2" parent="." unique_id=433381516 instance=ExtResource("10_00tp4")]
-position = Vector2(-82, 55)

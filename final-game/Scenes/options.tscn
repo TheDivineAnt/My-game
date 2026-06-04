@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://rfv7xnrwklep"]
+
+[ext_resource type="Script" uid="uid://pd603ap1yhiw" path="res://Scenes/control.gd" id="1_prnvy"]
+
+[node name="Options" type="Node2D" unique_id=1908383585]
+
+[node name="Options" type="Control" parent="." unique_id=936464734]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_prnvy")
+
+[node name="Go Back" type="Button" parent="Options" unique_id=2140208681]
+layout_mode = 0
+offset_top = 514.0
+offset_right = 1152.0
+offset_bottom = 614.0
+text = "Go Back
+"
+
+[connection signal="pressed" from="Options/Go Back" to="Options" method="_on_go_back_pressed"]

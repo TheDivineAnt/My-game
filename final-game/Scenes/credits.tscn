@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bhq4rc3e8kuw0"]
+
+[ext_resource type="Script" uid="uid://pd603ap1yhiw" path="res://Scenes/control.gd" id="1_r18jl"]
+
+[node name="Credits" type="Node2D" unique_id=443412505]
+
+[node name="Credits" type="Control" parent="." unique_id=1339921012]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_r18jl")
+
+[node name="Go Back" type="Button" parent="Credits" unique_id=1437310612]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 493.0
+offset_right = 1155.0
+offset_bottom = 596.0
+text = "Go Back"
+
+[connection signal="pressed" from="Credits/Go Back" to="Credits" method="_on_go_back_pressed"]

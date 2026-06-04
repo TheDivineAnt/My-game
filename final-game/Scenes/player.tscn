@@ -25,7 +25,8 @@ scale = Vector2(0.16555557, 0.16555557)
 shape = SubResource("CircleShape2D_hqtel")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=271655284]
-zoom = Vector2(3.7, 3.7)
+scale = Vector2(1.054985, -28.606644)
+zoom = Vector2(3.5, 3.5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
@@ -48,3 +49,10 @@ shadow_enabled = true
 shadow_color = Color(0.080783345, 0.080783345, 0.080783345, 0)
 texture = ExtResource("4_fkybt")
 offset = Vector2(300, 0)
+
+[node name="FlashlightCone" type="Area2D" parent="Player" unique_id=1245722657]
+collision_layer = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player/FlashlightCone" unique_id=1957394626]
+scale = Vector2(-9.038914, -4.869234)
+polygon = PackedVector2Array(-0.5531638, 0.41074222, -0.44253105, -0.6161133, -11.063276, -8.009474, -10.8420105, 7.1879888)

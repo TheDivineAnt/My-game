@@ -147,6 +147,6 @@ func _on_sight_range_body_exited(_body: Node2D) -> void:
 func _on_kill_area_body_entered(body: Node2D) -> void:
 	if body == self or body is TileMap or body is TileMapLayer:
 		return
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") or body.name == "Player":
 		print("GAME OVER")
 		get_tree().reload_current_scene()
