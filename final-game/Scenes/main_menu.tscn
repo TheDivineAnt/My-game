@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://q31wq3uso8no"]
 
 [ext_resource type="Script" uid="uid://bd2tpuh2iefx1" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://daslcm5dq81ex" path="res://light_point.webp" id="2_48xlc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_48xlc"]
 
 [node name="Main Menu" type="Control" unique_id=137369777]
 layout_mode = 3
@@ -14,38 +17,61 @@ script = ExtResource("1_28flt")
 [node name="PlayButton" type="Button" parent="." unique_id=1028842707]
 z_index = 2
 layout_mode = 0
-offset_left = 353.0
-offset_top = 85.0
-offset_right = 776.0
-offset_bottom = 212.0
+offset_left = 347.0
+offset_top = 45.0
+offset_right = 770.0
+offset_bottom = 175.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_48xlc")
 text = "Start"
 
 [node name="options" type="Button" parent="." unique_id=1370307523]
 z_index = 2
 layout_mode = 0
-offset_top = 282.0
-offset_right = 426.0
-offset_bottom = 404.0
+offset_left = 347.0
+offset_top = 189.0
+offset_right = 773.0
+offset_bottom = 311.0
 text = "Options"
 
 [node name="Quit" type="Button" parent="." unique_id=1056845993]
 z_index = 2
 layout_mode = 0
-offset_left = 353.0
-offset_top = 473.0
-offset_right = 779.0
-offset_bottom = 592.0
+offset_left = 347.0
+offset_top = 471.0
+offset_right = 773.0
+offset_bottom = 590.0
 text = "Quit"
 
 [node name="Credits" type="Button" parent="." unique_id=611873187]
 z_index = 2
 layout_mode = 0
-offset_left = 730.0
-offset_top = 282.0
-offset_right = 1152.0
-offset_bottom = 410.0
+offset_left = 347.0
+offset_top = 327.0
+offset_right = 769.0
+offset_bottom = 455.0
 text = "Credits
 "
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1299793868]
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1889482052]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuFlashlight" type="PointLight2D" parent="." unique_id=2105248414]
+position = Vector2(551, 386)
+energy = 8.65
+shadow_enabled = true
+texture = ExtResource("2_48xlc")
+texture_scale = 0.8
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="options" to="." method="_on_options_pressed"]

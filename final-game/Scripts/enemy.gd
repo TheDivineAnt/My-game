@@ -21,6 +21,10 @@ var player_in_range: Node2D = null
 @onready var nav_agent: NavigationAgent2D = get_node_or_null("NavigationAgent2D") 
 @onready var los_ray = get_node_or_null("LOSRayCast")
 
+func _ready() -> void:
+	# Automatically join the Enemy group so the player script tracks this node flawlessly
+	add_to_group("Enemy")
+
 func _physics_process(delta: float) -> void:
 	match current_state:
 		State.IDLE:
@@ -50,6 +54,7 @@ func handle_chase_state(delta: float) -> void:
 		current_state = State.IDLE
 		return
 
+	# Calculate speed scaling dynamically over time
 	time_elapsed += delta
 	current_speed = base_speed + (time_elapsed * speed_increase_rate)
 	current_speed = max(base_speed, current_speed)
@@ -59,18 +64,8 @@ func handle_chase_state(delta: float) -> void:
 			sprite.play("Walking")
 			sprite.speed_scale = current_speed / base_speed
 
-
-	time_elapsed += delta
-	current_speed = base_speed + (time_elapsed * speed_increase_rate)
-	current_speed = max(base_speed, current_speed)
-
-	if sprite and sprite is AnimatedSprite2D:
-		if sprite.has_animation("Walking"):
-			sprite.play("Walking")
-			sprite.speed_scale = current_speed / base_speed
-
-	if nav_agent:
-		# Set the target position directly
+	if nav_agent and player:
+		# Set the pathfinding target directly to the player
 		nav_agent.target_position = player.global_position
 		
 		# Get the next path movement vector
@@ -112,8 +107,12 @@ func handle_flee_state(delta: float) -> void:
 			sprite.play("Walking")
 			sprite.speed_scale = fear_speed / base_speed 
 
-	var direction = (global_position - player.global_position).normalized()
-	velocity = direction * fear_speed
+	if player:
+		var direction = (global_position - player.global_position).normalized()
+		velocity = direction * fear_speed
+	else:
+		velocity = Vector2.ZERO
+		
 	move_and_slide()
 	
 	flee_timer -= delta

@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://rfv7xnrwklep"]
 
-[ext_resource type="Script" uid="uid://pd603ap1yhiw" path="res://Scenes/control.gd" id="1_prnvy"]
+[ext_resource type="Script" uid="uid://pd603ap1yhiw" path="res://Scripts/control.gd" id="1_prnvy"]
+[ext_resource type="Texture2D" uid="uid://daslcm5dq81ex" path="res://light_point.webp" id="2_4tmxy"]
+
+[sub_resource type="Theme" id="Theme_qyyw6"]
 
 [node name="Options" type="Node2D" unique_id=1908383585]
 
@@ -11,12 +14,59 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_prnvy")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="Options" unique_id=889229546]
+light_mask = 3
+color = Color(0.07762883, 0.07762881, 0.07762881, 1)
+
 [node name="Go Back" type="Button" parent="Options" unique_id=2140208681]
+z_index = 1
 layout_mode = 0
 offset_top = 514.0
 offset_right = 1152.0
 offset_bottom = 614.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "Go Back
 "
+
+[node name="Nothing in here" type="Label" parent="Options" unique_id=946165644]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_top = 91.0
+offset_right = 142.0
+offset_bottom = 114.0
+scale = Vector2(8.105518, 8.085573)
+theme = SubResource("Theme_qyyw6")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Nothing in here"
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="Options" unique_id=1672613178]
+light_mask = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.825
+anchor_bottom = 16.125
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.096204735, 0.09620475, 0.09620472, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Options" unique_id=409730206]
+z_index = 2
+position = Vector2(613, 458)
+energy = 5.14
+shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 64.0
+texture = ExtResource("2_4tmxy")
+texture_scale = 0.7
 
 [connection signal="pressed" from="Options/Go Back" to="Options" method="_on_go_back_pressed"]

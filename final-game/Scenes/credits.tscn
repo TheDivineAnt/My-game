@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhq4rc3e8kuw0"]
 
-[ext_resource type="Script" uid="uid://pd603ap1yhiw" path="res://Scenes/control.gd" id="1_r18jl"]
+[ext_resource type="Script" uid="uid://pd603ap1yhiw" path="res://Scripts/control.gd" id="1_r18jl"]
 
 [node name="Credits" type="Node2D" unique_id=443412505]
 
