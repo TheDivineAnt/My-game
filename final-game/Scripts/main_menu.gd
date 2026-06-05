@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 		menu_flashlight.position = get_local_mouse_position()
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/test.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Map.tscn")
 
 
 func _on_options_pressed() -> void:
